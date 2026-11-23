@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "packlens"
+dynamic = ["version"]
+description = "Inspect archives. Understand contents."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Sam3360" }]
+keywords = ["archive", "zip", "tar", "inspect", "verify", "security", "cli"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: System :: Archiving",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
+dependencies = []  # standard library only
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "hypothesis>=6", "build"]
+
+[project.urls]
+Homepage = "https://github.com/Sam3360/packlens"
+Source = "https://github.com/Sam3360/packlens"
+Issues = "https://github.com/Sam3360/packlens/issues"
+
+[project.scripts]
+packlens = "packlens.cli:main"
+
+[tool.setuptools.dynamic]
+version = { attr = "packlens.__version__" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+packlens = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
