@@ -75,6 +75,8 @@ class _TrackingReader:
         return self._raw.tell()
 
     def seek(self, offset: int, whence: int = 0) -> int:
+        if whence == 0 and offset < 0:
+            offset = 0
         if self._skip_by_reading and whence == 0:
             remaining = offset - self._raw.tell()
             if remaining > 0:
