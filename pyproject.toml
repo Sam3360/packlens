@@ -13,7 +13,7 @@ license-files = ["LICENSE"]
 authors = [{ name = "Sam3360" }]
 keywords = ["archive", "zip", "tar", "inspect", "verify", "security", "cli"]
 classifiers = [
-    "Development Status :: 4 - Beta",
+    "Development Status :: 5 - Production/Stable",
     "Environment :: Console",
     "Intended Audience :: Developers",
     "Operating System :: OS Independent",

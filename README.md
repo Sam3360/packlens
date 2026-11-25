@@ -256,8 +256,7 @@ text and JSON output say so explicitly. `compare` exits 0 whether or not differe
 - A TAR file only proves structure, never content integrity.
 - Link-escape analysis resolves paths lexically; it does not know what exists on a target
   filesystem.
-- Tested on Linux only so far. Windows and macOS are covered by the CI workflow in
-  `.github/workflows/ci.yml` but have not been run.
+- Tested on Linux, Windows and macOS through the CI workflow.
 
 ## Development
 
